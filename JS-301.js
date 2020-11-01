@@ -1,6 +1,7 @@
 // Napisati funkciju min koja prima dva argumenta i vraća natrag manjeg.
-let a;
-let b;
+// let a;
+// let b;
+// zasto ovo radi i ako ne deklariram a i b?
 
 function min(a, b){
     if (a < b)
