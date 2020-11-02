@@ -3,9 +3,9 @@
 // provjeri(lista, pojam) koja vraća true ukoliko postoji student na lista čije ime ili
 // prezime je baš pojam , a upisan je.
 
-var imeprezime = 'Devlic';
+let imeprezime = 'Devlic';
 
-var student = [
+let student = [
     {ime: 'Ivana' , 
     prezime: 'Polonijo',
     upisan: true,
