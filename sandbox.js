@@ -1,46 +1,10 @@
-let student = [
-    {ime: 'Ivana' , 
-    prezime: 'Polonijo',
-    upisan: true,
-    },
-    {ime: 'Ivana' , 
-    prezime: 'Devlic',
-    upisan: true,
-    },
-    {ime: 'Ivana' , 
-    prezime: 'Polonijo',
-    upisan: false,
-    },    
-    {ime: 'Martina' , 
-    prezime: 'Martinovic',
-    upisan: true,
-    },
-    {ime: 'Ana' , 
-    prezime: 'Kralj',
-    upisan: false,
-    },
-    {ime: 'Ana' , 
-    prezime: 'Mart',
-    upisan: false,
-    },
-    {ime: 'Lana' , 
-    prezime: 'Kralj',
-    upisan: true,
-    },
-    {ime: 'Leda' , 
-    prezime: 'Frleta',
-    upisan: true,
-    },
-    {ime: 'Luka' , 
-    prezime: 'Tesla',
-    upisan: false,
-    },
-    {ime: 'Petra' , 
-    prezime: 'Devlic',
-    upisan: false,
-    }
-];
+let zagrade = "abbbabba";
 
-for (let i=0; i<=(student.length -1); i++){
-    console.log(student[i].ime);
-}
+
+function check(zagrade) {
+   for (i=0; i < zagrade.lenght; i++){
+        console.log(zagrade[i]);
+        }
+   };
+
+check(zagrade);
