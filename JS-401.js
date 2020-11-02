@@ -3,7 +3,7 @@
 // provjeri(lista, pojam) koja vraća true ukoliko postoji student na lista čije ime ili
 // prezime je baš pojam , a upisan je.
 
-let imeprezime = 'Marko';
+let imeprezime = 'Slavko';
 
 let student = [
     {
@@ -60,7 +60,7 @@ let student = [
 
 
 function provjera(imeprezime) {
-    for (let i = 0; i <= (student.length - 1); i++) //idemo od 0 indexsa do jednog manje od ukupne dužine arraya 
+    for (let i = 0; i < student.length; i++) //idemo od 0 indexsa do jednog manje od ukupne dužine arraya 
     {
         if (student[i].upisan == true && (student[i].ime == imeprezime || student[i].prezime == imeprezime))
             return true;

@@ -61,7 +61,7 @@ let student = [
 ];
 
 function provjera(imeprezime) {
-    for (let i = 0; i <= (student.length - 1); i++) //idemo od 0 indexsa do jednog manje od ukupne dužine arraya 
+    for (let i = 0; i < student.length; i++) //idemo od 0 indexsa do jednog manje od ukupne dužine arraya 
     {
         if (student[i].upisan == status &&
             (student[i].ime.toLowerCase() == imeprezime.toLowerCase() || student[i].prezime.toLowerCase() == imeprezime.toLowerCase()))
