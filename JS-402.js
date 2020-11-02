@@ -4,8 +4,9 @@
 // istovjetan primljenom parametru status . Drugim riječima, ne provjerava samo upisane studente
 // nego se može specificirati status upisa.
 
-let imeprezime = "ivana";
-let status = false;
+
+let imeprezime = "ANA";
+let status = true;
 
 let student = [
     {
@@ -61,11 +62,16 @@ let student = [
 ];
 
 function provjera(imeprezime) {
+    let temp = imeprezime.toLowerCase(); //pretvaram trazen string u sva male
+
     for (let i = 0; i < student.length; i++) //idemo od 0 indexsa do jednog manje od ukupne dužine arraya 
     {
+        let studtemp = student[i].ime.toLowerCase(); //pretvaram ime u sve male
+        let studpreztemp = student[i].prezime.toLowerCase(); //prezime pretvaram u sve male
+
         if (student[i].upisan == status &&
-            (student[i].ime.toLowerCase() == imeprezime.toLowerCase() || student[i].prezime.toLowerCase() == imeprezime.toLowerCase()))
-            //ne znam jel može ovaj if da ljepše izgleda :)
+            (studtemp.search(temp) || studpreztemp.search(temp))) //nisam znala kombinirati metodu s metodom...pa sam si iznad napavila temp varijable
+            
             return console.log("Postoji!");
     }
     return console.log("Ne postoji!");
