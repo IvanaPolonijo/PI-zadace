@@ -12,3 +12,4 @@ function ponavljanje(INPUT) {
     return console.log(INPUT);
 }
 
+//banana ne dolazi dobro!!!
