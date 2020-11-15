@@ -24,7 +24,7 @@ function zbrajanje(n) {
         else if (n === unos) return (console.log("jest djeljiv")); //ako je pomocni koeficijent isti unosu onda znaci da je unos djeljiv
         else zbrajanje(n); //ako prijasnja dva uvjeta nisu zadovoljena idemo u rekurziju
     }
-    else{
+    else {
         n -= 3; //buduci je unos negativan smanjujemo pomocni koef za 3
         if (n < unos) return (console.log("nije djeljiv")); // ako je pomoc.koef. manji od unesenog broja onda prekidamo funkciju
         else if (n == unos) return (console.log("jest djeljiv"));//ako su iti onda je broj djeljiv s 3
@@ -34,7 +34,7 @@ function zbrajanje(n) {
 
 isDivisible(unos)
 
-
+// ne kontam kako boolean kad su returns as below
 // console.log(isDivisible("9")) //True
 // console.log(isDivisible("333")) //True
 // console.log(isDivisible("334")) //False
