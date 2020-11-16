@@ -8,8 +8,8 @@ function reverseEverything(string) {
     var check = 0;
     let obrnutiStr = "";
     for (let i = (string.length - 1); i >= 0; i--) {
-        if (pomocni[i] === " ") { check++ } //markiram ako se pojavilo prazno mjesto. zanimljivo! radi samo ako
-        //fakat imam prazno mjesto između navodnika
+        if (pomocni[i] === " " ) { check++ } //markiram ako se pojavilo prazno mjesto. 
+        //zanimljivo! radi samo ako fakat imam prazno mjesto između navodnika
         obrnutiStr += pomocni.pop(); //slozim obrnuti string iz stacka
     }
     if (check == 0) return "Input nije valjan."
@@ -20,5 +20,4 @@ console.log(reverseEverything("iv Po"))
 console.log(reverseEverything("Riba ribi grize rep")) //"per ezirg ibir abiR"
 console.log(reverseEverything("Riba_ribi_grize_rep")) //Input nije valjan
 
-//razmisljam o sceanariju da je blank na pocetku rijecu ili kraju
-//treba jos pokriti scenarij da je samo jedna rijec
+//razmisljam o scenariju da je blank na pocetku rijeci ili kraju!
