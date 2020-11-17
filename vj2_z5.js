@@ -15,7 +15,7 @@ function passwordValidator(string) {
             console.log("Nedostaje znamenka")
         if (!string.match(/(?=.*[!@#\$%\^&\*])/))
             console.log("Nedostaje poseban znak")
-        if (!string.match(/(?!.*\s).{6,15}/))  //ovaj mi ne vraca dobro
+        if (!string.match(/(?=.{6,15})/))  //ovaj mi ne vraca dobro
             console.log("Nije odgovarajuce duljine!")
         return false;
     };
@@ -25,7 +25,7 @@ function passwordValidator(string) {
 // je li okay vracanje tog if toliko puta da mi ispise svaki error  
 // RegExp(^  (?=.*[A-Z])  (?=.*[0-9]) (?=.*[!@#\$%\^&\*])  (?=.{6,15}) )
 
+console.log(passwordValidator("123aa#fzseivsrhanz7654asfefA"))
 console.log(passwordValidator("123Aa!")) //True
 console.log(passwordValidator("A")) //False -> Input je prekratak
 console.log(passwordValidator("123aa!")) //False -> Nedostaje veliko slovo 
-console.log(passwordValidator("123aa#fzseivsrhanz7654asfefA"))
