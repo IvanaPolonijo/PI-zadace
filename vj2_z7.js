@@ -31,7 +31,7 @@ function sumIntervalElements(a, b) {
 
         }
         let suma = 0
-        suma = (a + b) * ((udaljenost + 1)/2) //koristim formulu za sumu nizova uzastopnih brojeva
+        suma = (a + b) * ((udaljenost + 1) / 2) //koristim formulu za sumu nizova uzastopnih brojeva
         return suma;
     }
 }
