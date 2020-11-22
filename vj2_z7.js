@@ -37,7 +37,7 @@ function sumIntervalElements(a, b) {
 }
 console.log(sumIntervalElements(0, -5))
 console.log(sumIntervalElements(2, 5)) //14
-console.log(sumIntervalElements(-2, 5))
+console.log(sumIntervalElements(-21, 52))
 console.log(sumIntervalElements(-2, -5))
 console.log(sumIntervalElements(2, -5))
 console.log(sumIntervalElements(-2, -5))
@@ -48,4 +48,3 @@ console.log(sumIntervalElements(-5, -2))
 console.log(sumIntervalElements(2, "a")) //Input nije valjan
 console.log(sumIntervalElements(5.3, 2)) //Input nije valjan
 console.log(sumIntervalElements(2, 2)) //Input nije valjan
-
