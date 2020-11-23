@@ -4,9 +4,10 @@
 // ispišite zašto input ne zadovoljava pravilo. Istu funkciju možete iskoristiti za svoj projekt.
 
 function passwordValidator(string) {
-    let pass = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?!.*\s).{6,15}$/
+    let pass = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])^.{6,15}$/
 
     //regexp mozda iznjeti van funkije kao var da se koristi i na drugim  funkcijama?
+
     if (string.match(pass)) return true;
     else {
         if (!string.match(/(?=.*[A-Z])/))
@@ -15,7 +16,7 @@ function passwordValidator(string) {
             console.log("Nedostaje znamenka")
         if (!string.match(/(?=.*[!@#\$%\^&\*])/))
             console.log("Nedostaje poseban znak")
-        if (!string.match(/(?=.{6,15})/))  //ovaj mi ne vraca dobro
+        if (!string.match(/^.{6,15}$/))  //ovaj mi ne vraca dobro
             console.log("Nije odgovarajuce duljine!")
         return false;
     };
@@ -23,9 +24,12 @@ function passwordValidator(string) {
 }
 
 // je li okay vracanje tog if toliko puta da mi ispise svaki error  
-// RegExp(^  (?=.*[A-Z])  (?=.*[0-9]) (?=.*[!@#\$%\^&\*])  (?=.{6,15}) )
+// RegExp(^  (?=.*[A-Z])  (?=.*[0-9]) (?=.*[!@#\$%\^&\*])  ^.{6,15}$ ) - da znam što je što u regexp
 
 console.log(passwordValidator("123aa#fzseivsrhanz7654asfefA"))
+console.log (" ")
 console.log(passwordValidator("123Aa!")) //True
+console.log (" ")
 console.log(passwordValidator("A")) //False -> Input je prekratak
+console.log (" ")
 console.log(passwordValidator("123aa!")) //False -> Nedostaje veliko slovo 
